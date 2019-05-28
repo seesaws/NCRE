@@ -1,0 +1,93 @@
+<!--
+Created by IntelliJ IDEA.
+User: Linran
+Date: 2019/4/29
+Time: 10:55
+To change this template use File | Settings | File Templates.
+-->
+<html xmlns:th="http://www.thymeleaf.org" xmlns:o="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Spring Boot Sample</title>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/FileSaver.js"></script>
+    <script type="text/javascript" src="/js/jquery.wordexport.js"></script>
+    <script type="text/javascript" language="javascript">
+        jQuery(document).ready(function($){
+
+            //jquery  code
+
+                $("input[type='button']").click(function () {
+                    $(".word").wordExport('生成word文档');
+                });
+        })
+
+    </script>
+
+</head>
+<body>
+<form id="form0" action="/user/printInfo" method="POST">
+    <!-- 此处getXueyuan()方法获取的是option标签中的value属性所对应的值，而不是页面显示的值 -->
+    选择学院
+    <select name="selYx">
+        <option value="0">请选择</option>
+        <option th:each="c:${AllYx}"  th:text="${c.yx}" ></option>
+    </select>
+    选择专业
+    <select name="selZy">
+        <option value="0">请选择</option>
+        <option th:each="c:${AllZy}"  th:text="${c.zy}" ></option>
+    </select>
+    选择班级
+    <select name="sclass">
+        <option value="0">请选择</option>
+        <option th:each="c:${AllSclass}"  th:text="${c.sclass}" ></option>
+    </select>
+    <input type="reset" value="重置"><input type="submit" value="查询"><center><a href="/user/index">返回</a></center>
+    <br>
+    <input type="button" value="导出word">
+    <div id="word" class="word">
+    <p id="TestDiv">
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>学号</th>
+            <th>准考证号</th>
+            <th>姓名</th>
+            <th>报考类别</th>
+            <th>场次</th>
+            <th>开始时间</th>
+            <th>机房号</th>
+            <th>院系名称</th>
+            <th>专业名称</th>
+            <th>年级</th>
+            <th>性别</th>
+            <th>专业班级名称</th>
+            <th>校区</th>
+            <th>考场</th>
+            <th>理论考试</th>
+        </tr>
+        <tr th:each="user : ${userList}">
+            <td th:text="${user.id}"></td>
+            <td th:text="${user.no}"></td>
+            <td th:text="${user.zkzh}"></td>
+            <td th:text="${user.name}"></td>
+            <td th:text="${user.bclass}"></td>
+            <td th:text="${user?.ccc?.date}"></td>
+            <td th:text="${user?.ccc?.starttime}"></td>
+            <td th:text="${user.jfh}"></td>
+            <td th:text="${user.yx}"></td>
+            <td th:text="${user.zy}"></td>
+            <td th:text="${user.nj}"></td>
+            <td th:text="${user.sex}"></td>
+            <td th:text="${user.sclass}"></td>
+            <td th:text="${user.xiaoqu.xxq}"></td>
+            <td th:text="${user.kc}"></td>
+            <td th:text="${user.llks}"></td>
+        </tr>
+    </table>
+
+    </p>
+    </div>
+</form>
+</body>
+</html>

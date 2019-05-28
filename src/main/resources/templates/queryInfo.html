@@ -1,0 +1,26 @@
+
+
+<title>2019年春——计算机等级考试上机考场安排</title></head>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <link th:href="@{/js/jquery-3.3.1.min.js}" rel="stylesheet"/>
+    <title>查询界面</title>
+</head>
+<body leftmargin="0" topmargin="0">
+<div align="center">
+    你的考试安排
+    <br>
+    <p th:text="${user.bclass}"></p>
+    <p th:text="${user.sclass}">的</p>
+    <font color='#FF0000'><p th:text="${user.name}"></p></font>
+    同学，你的准考证号是<p th:text="${user.zkzh}"></p>
+    <p>你的理论考试地点为：
+    <p th:text="${user.llks}"></p>
+    考试时间为：<font color='#FF0000'><p th:text="${user.ccc.date}"></p></font>
+    <font color='#FF0000'><p th:text="${user.ccc.starttime}"></p></font>
+    <p>你的上机考试地点在:
+        <font color='#FF0000'><p th:text="${user.jfh}"></p></font></div></机房(钱湖校区)</div>
+<center><a href="/user/index">返回</a></center>
+</body></html>

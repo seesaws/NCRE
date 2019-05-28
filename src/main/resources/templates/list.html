@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <title>Title</title>
+</head>
+<body>
+<center><a href="/user/index">返回</a></center>
+<table border="1">
+    <tr>
+        <th>ID</th>
+        <th>学号</th>
+        <th>准考证号</th>
+        <th>姓名</th>
+        <th>报考类别</th>
+        <th>场次</th>
+        <th>开始时间</th>
+        <th>机房号</th>
+        <th>院系名称</th>
+        <th>专业名称</th>
+        <th>年级</th>
+        <th>性别</th>
+        <th>专业班级名称</th>
+        <th>校区</th>
+        <th>考场</th>
+        <th>理论考试</th>
+    </tr>
+    <tr th:each="user : ${userList}">
+        <td th:text="${user.id}"></td>
+        <td th:text="${user.no}"></td>
+        <td th:text="${user.zkzh}"></td>
+        <td th:text="${user.name}"></td>
+        <td th:text="${user.bclass}"></td>
+        <td th:text="${user?.ccc?.date}"></td>
+        <td th:text="${user?.ccc?.starttime}"></td>
+        <td th:text="${user.jfh}"></td>
+        <td th:text="${user.yx}"></td>
+        <td th:text="${user.zy}"></td>
+        <td th:text="${user.nj}"></td>
+        <td th:text="${user.sex}"></td>
+        <td th:text="${user.sclass}"></td>
+        <td th:text="${user.xiaoqu.xxq}"></td>
+        <td th:text="${user.kc}"></td>
+        <td th:text="${user.llks}"></td>
+    </tr>
+</table>
+</body>
+</html>

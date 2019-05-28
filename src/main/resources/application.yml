@@ -1,0 +1,22 @@
+spring:
+  thymeleaf:
+    mode: HTML5
+    encoding: UTF-8
+    cache: false
+  datasource:
+    url: jdbc:mysql://localhost:3306/djks?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&allowMultiQueries=true
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: 123456
+    hikari:
+      connection-timeout: 60000
+server:
+  tomcat:
+    uri-encoding: utf-8
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.team5408.entity
+  configuration:
+    map-underscore-to-camel-case: true
+    call-setters-on-nulls: true
+

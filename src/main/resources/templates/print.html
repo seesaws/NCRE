@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="en" xmlns:th="http://www.thymeleaf.org" xmlns:o="http://www.w3.org/1999/xhtml">
+<head>
+    <meta content="text/html;charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width,initial-scale=1"/>
+    <link th:href="@{/js/jquery-3.3.1.min.js}" rel="stylesheet"/>
+    <script type="text/javascript" src="/js/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="/js/FileSaver.js"></script>
+    <script type="text/javascript" src="/js/jquery.wordexport.js"></script>
+    <script type="text/javascript" language="javascript">
+        jQuery(document).ready(function($){
+
+            //jquery  code
+
+            $("input[type='button']").click(function () {
+                $(".word").wordExport('生成word文档');
+            });
+        })
+
+    </script>
+</head>
+<body>
+<form action="/user/printInfo" id="form0" method="POST">
+    <input type="text" name="name"><input type="submit" value="查询"><input type="button" value="导出word">
+    <div id="word" class="word">
+    <table class="MsoNormalTable" border="1" cellspacing="0" cellpadding="0" width="100%" style="width:100.0%;mso-cellspacing:0cm;border:solid black 1.0pt;mso-border-alt:
+   solid black .75pt;mso-yfti-tbllook:1184;mso-padding-alt:0cm 0cm 0cm 0cm">
+        <tbody>
+        <tr style="mso-yfti-irow:0;mso-yfti-firstrow:yes">
+            <td colspan="3" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="center" style="text-align:center;line-height:15.7pt;
+                mso-pagination:widow-orphan"><b><span style="font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt">浙江省高校计算机等级考试</span></b><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:1">
+            <td colspan="3" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="center" style="text-align:center;line-height:15.7pt;
+                mso-pagination:widow-orphan"><b><span style="font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt">准考证</span></b><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:2">
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+                10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+                0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+                mso-bidi-font-family:SimSun;mso-font-kerning:0pt">考试地点<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td colspan="2" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span style="font-size:10.0pt;font-family:
+                SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:0pt">理论：钱湖校区<span lang="EN-US">1307</span>，机考：<span lang="EN-US">5206</span>机房</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:3">
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+                10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+                0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+                mso-bidi-font-family:SimSun;mso-font-kerning:0pt">学校名称<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span style="mso-bidi-font-size:10.5pt;
+                font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:0pt">浙江万里学院<span lang="EN-US"><o:p></o:p></span></span></p>
+            </td>
+            <td rowspan="4" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+                10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+                0pt;mso-no-proof:yes"><!--[if gte vml 1]><v:shape id="_x56fe__x7247__x0020_278"
+                  o:spid="_x0000_i1077" type="#_x0000_t75" alt="http://10.61.60.12/djkscx/jpg/2016010305.jpg"
+                  style='width:45pt;height:67.5pt;visibility:visible;mso-wrap-style:square'><v:imagedata src="file8533.files/image003.jpg" o:title="2016010305"/></v:shape><![endif]--><!--[if !vml]--><img width="60" height="90" src="file8533.files/image004.jpg" alt="http://10.61.60.12/djkscx/jpg/2016010305.jpg" v:shapes="_x56fe__x7247__x0020_278"><!--[endif]--></span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                  SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:4">
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+                10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+                0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+                mso-bidi-font-family:SimSun;mso-font-kerning:0pt">应试类型<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+    mso-pagination:widow-orphan"><span style="mso-bidi-font-size:10.5pt;
+    font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:0pt">二级<span lang="EN-US"> C</span>语言（<span lang="EN-US">Windows7</span>）<span lang="EN-US"><o:p></o:p></span></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:5">
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+            mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+            10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+            0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+            mso-bidi-font-family:SimSun;mso-font-kerning:0pt">准考证号<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+            mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+            10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+            0pt">191161121100202<o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:6">
+            <td valign="top" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+        mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+        10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+        0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+        mso-bidi-font-family:SimSun;mso-font-kerning:0pt">考生姓名<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+        mso-pagination:widow-orphan"><span style="mso-bidi-font-size:10.5pt;
+        font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:0pt">于昊轩<span lang="EN-US">(</span>电气<span lang="EN-US">163)
+                    <o:p></o:p></span></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:7">
+            <td valign="top" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+            mso-pagination:widow-orphan"><span lang="EN-US" style="mso-bidi-font-size:
+            10.5pt;font-family:SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:
+            0pt">&nbsp;</span><span style="mso-bidi-font-size:10.5pt;font-family:SimSun;
+            mso-bidi-font-family:SimSun;mso-font-kerning:0pt">考试时间<span lang="EN-US">:<o:p></o:p></span></span></p>
+            </td>
+            <td colspan="2" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="left" style="text-align:left;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span style="font-size:10.0pt;font-family:
+                SimSun;mso-bidi-font-family:SimSun;mso-font-kerning:0pt">理论：<span lang="EN-US">2019-4-20 09:00<br>
+                </span>机考：<span lang="EN-US">2019-04-20&nbsp;18:00</span></span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+        </tr>
+        <tr style="mso-yfti-irow:8;mso-yfti-lastrow:yes">
+            <td colspan="2" style="border:none;padding:0cm 0cm 0cm 0cm">
+                <p class="MsoNormal" align="center" style="text-align:center;line-height:15.7pt;
+                mso-pagination:widow-orphan"><span style="font-size:7.5pt;font-family:SimSun;
+                mso-bidi-font-family:SimSun;mso-font-kerning:0pt">注：考生凭准考证、身份证<span lang="EN-US">(</span>或学生证<span lang="EN-US">)</span>参加考试。理论考试需带<span lang="EN-US">2B</span>铅笔等考试用品。考试按规定时间提前<span lang="EN-US">15</span>分钟进入考场。禁止携带手机等通讯工具进入考场。</span><span lang="EN-US" style="mso-bidi-font-size:10.5pt;font-family:SimSun;mso-bidi-font-family:
+                SimSun;mso-font-kerning:0pt"><o:p></o:p></span></p>
+            </td>
+            <td style="border:none;padding:0cm 0cm 0cm 0cm"></td>
+        </tr>
+        </tbody>
+    </table>
+    </div>
+</form>
+</body>
+</html>

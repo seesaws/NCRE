@@ -1,0 +1,28 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+<!--        "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >-->
+<!--<mapper namespace="com.team5408.dao.UserDao">-->
+<!--    <resultMap id="userMap" type="com.team5408.entity.User">-->
+<!--        <result property="id" column="id"/>-->
+<!--        <result property="no" column="no" />-->
+<!--        <result property="zkzh" column="zkzh"/>-->
+<!--        <result property="name" column="name"/>-->
+<!--        <result property="bclass" column="bclass"/>-->
+<!--        <result property="cc" column="cc"/>-->
+<!--        <result property="jfh" column="jfh"/>-->
+<!--        <result property="yx" column="yx"/>-->
+<!--        <result property="zy" column="zy"/>-->
+<!--        <result property="nj" column="nj"/>-->
+<!--        <result property="sex" column="sex"/>-->
+<!--        <result property="Sclass" column="Sclass"/>-->
+<!--        <result property="xq" column="xq"/>-->
+<!--        <result property="kc" column="kc"/>-->
+<!--        <result property="llks" column="llks"/>-->
+<!--    </resultMap>-->
+<!--    <select id="selectUserList" parameterType="user" resultType="user">-->
+<!--        SELECT * FROM user-->
+<!--    </select>-->
+<!--    <select id="selectUserCount" parameterType="user" resultType="Integer">-->
+<!--        SELECT count (*) from user-->
+<!--    </select>-->
+<!--</mapper>-->
